@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h4>This is from the homepage.html template</h4>
+
+{% for book in book_list_from_view %}
+<div style="border: 1px solid black;">
+    <p>{{ book.author }}</p>
+    <p>{{ book.title }}</p>
+    <a href="{% url 'show_book' pk=book.id %}">Link to detail</a>
+</div>
+{% endfor %}
+
+{% endblock %}

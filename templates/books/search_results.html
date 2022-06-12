@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h4>Here are all of {{ author_name }}'s books:</h4>
+{% for book in books %}
+<div style="border: 1px solid black;">
+    <p>{{ book.author }}</p>
+    <p>{{ book.title }}</p>
+    <a href="{% url 'show_book' pk=book.pk %}">Link to detail</a>
+</div>
+{% endfor %}
+{% endblock %}

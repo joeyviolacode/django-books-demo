@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h4>This is part of the book_detail template.</h4>
+
+<p>{{ book.title }}</p>
+<p>{{ book.author }}</p>
+<p>{{ book.description }}</p>
+
+{% if book.year %}
+<p>{{ book.year }}</p>
+{% endif %}
+
+{% endblock %}
